@@ -1,20 +1,19 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 let connection;
 
-
 const getConnection = async () => {
-    if (!connection) {
-        // 2. Insert the correct db url
-        // Your URL should be mongodb://localhost/<database name>, ie. mongodb://localhost/<database name>
-        connection = await mongoose.connect('mongodb://localhost/<database name>', {
-            useNewUrlParser: true,
-            useCreateIndex: true,
-        });
-    }
-    return connection;
-}
+  if (!connection) {
+    // 2. Insert the correct db url
+    // Your URL should be mongodb://localhost/<database name>, ie. mongodb://localhost/<database name>
+    connection = await mongoose.connect("mongodb://localhost/Banking", {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+    });
+  }
+  return connection;
+};
 
 module.exports = {
-    getConnection: getConnection
-}
+  getConnection: getConnection,
+};
