@@ -1,1 +1,5 @@
 GET http://localhost:8080/accounts
+
+###
+
+GET http://localhost:8080/accounts/Christopher
