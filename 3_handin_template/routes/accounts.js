@@ -43,18 +43,26 @@ router.get("/", async (req, res) => {
 });
 
 // Implement endpoint to create a new User
-router.get("/add/:name", async (req, res) => {
+router.post("/add", async (req, res) => {
   let create = await accountModel.create({
-    firstName: req.params.name,
-    lastName: "...",
-    balance: "123",
-    branch: "...",
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    balance: req.body.balance,
+    branch: req.body.branch,
   });
   res.send(
-    "User added with name " +
-      req.params.name +
-      "<br></br>" +
-      " Lastname, balance and branch is hardcoded"
+    "User added: \n" +
+      "Firstname: " +
+      req.body.firstName +
+      "\n" +
+      "Lastname: " +
+      req.body.lastName +
+      "\n" +
+      "Balance: " +
+      req.body.balance +
+      "\n" +
+      "Branch: " +
+      req.body.branch
   );
   res.end(create);
 });

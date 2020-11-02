@@ -1,5 +1,25 @@
-GET http://localhost:8080/accounts
+//Reference to base url 
+@base_url = http://localhost:8080
+
+
+
+//Get all accounts
+GET {{base_url}}/accounts
+
+###
+//Get balance for an accounts (in this case Christopher)
+GET {{base_url}}/accounts/Christopher 
+
 
 ###
 
-GET http://localhost:8080/accounts/Christopher
+POST {{base_url}}/accounts/add 
+Content-Type: application/json
+
+{
+    "firstName": "Rasmus",
+    "lastName": "Rasmussen",
+    "balance": "150",
+    "branch": "CBS Banking branch 1"
+
+}
