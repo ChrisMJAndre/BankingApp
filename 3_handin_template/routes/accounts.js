@@ -54,14 +54,11 @@ router.post("/add", async (req, res) => {
     "User added: \n" +
       "Firstname: " +
       req.body.firstName +
-      "\n" +
-      "Lastname: " +
+      "\n Lastname: " +
       req.body.lastName +
-      "\n" +
-      "Balance: " +
+      "\n Balance: " +
       req.body.balance +
-      "\n" +
-      "Branch: " +
+      "\n Branch: " +
       req.body.branch
   );
   res.end(create);
