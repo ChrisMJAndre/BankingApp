@@ -16,6 +16,7 @@ const router = require("./routes/accounts");
 
 app.use("/accounts", accountRoute);
 
+// Starting ssl server
 const sslServer = https.createServer(
   {
     key: fs.readFileSync(path.join(__dirname, "cert", "key.pem")),
