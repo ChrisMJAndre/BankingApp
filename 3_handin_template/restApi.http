@@ -13,6 +13,7 @@ GET {{base_url}}/accounts/Christopher
 
 ###
 
+//Add a user
 POST {{base_url}}/accounts/add 
 Content-Type: application/json
 
