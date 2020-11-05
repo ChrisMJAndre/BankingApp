@@ -2,7 +2,10 @@
 @base_url = https://localhost:3443
 
 
+//Home page 
+GET {{base_url}}
 
+###
 //Get all accounts
 GET {{base_url}}/accounts
 
